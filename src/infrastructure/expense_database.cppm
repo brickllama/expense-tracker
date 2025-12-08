@@ -18,5 +18,7 @@ namespace Infrastructure
         std::optional<Core::Expense> select(const int& id);
         bool remove(const Core::Expense& expense);
         bool update(const Core::Expense& expense);
+    private:
+        bool table_checks();
     };
 }
