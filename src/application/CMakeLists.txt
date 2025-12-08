@@ -1,3 +1,5 @@
+find_package(Qt6 REQUIRED COMPONENTS Core)
+
 add_library(application)
 
 target_sources(application
@@ -11,4 +13,5 @@ target_sources(application
 target_link_libraries(application
     PUBLIC
         core
+        Qt6::Core
 )

@@ -1,6 +1,6 @@
 module; // Global Module Fragment
 
-module Application.ExpenseManager;
+module Application.ExpenseManager; // Implementation Unit
 
 namespace Application
 {

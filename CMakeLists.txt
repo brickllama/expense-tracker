@@ -12,3 +12,8 @@ add_subdirectory(tests)
 add_executable(ExpenseTracker
     main.cpp
 )
+
+target_link_libraries(ExpenseTracker
+    PRIVATE
+        infrastructure
+)
