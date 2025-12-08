@@ -12,10 +12,11 @@ namespace Infrastructure
     export class ExpenseDatabase : public Core::IDatabase
     {
     public:
+        explicit ExpenseDatabase() { }
         bool connect();
-        bool add(const Core::Expense& expense);
-        std::optional<Core::Expense> get(const int& id);
+        bool insert(const Core::Expense& expense);
+        std::optional<Core::Expense> select(const int& id);
         bool remove(const Core::Expense& expense);
-        bool edit(const Core::Expense& expense);
+        bool update(const Core::Expense& expense);
     };
 }

@@ -3,10 +3,12 @@ enable_testing(true)
 # --- BACKEND TESTING
 add_subdirectory(core)
 add_subdirectory(application)
+add_subdirectory(infrastructure)
 
 set(BACKEND_SOURCES
     ${CORE_SOURCES}
     ${APPLICATION_SOURCES}
+    ${INFRASTRUCTURE_SOURCES}
 )
 
 find_package(GTest REQUIRED)
@@ -25,7 +27,7 @@ target_link_libraries(BackendTests
 
 target_compile_definitions(BackendTests
     PRIVATE
-        UNIT_TEST
+        TESTING
 )
 
 # These might be optional... according to the dependency chart.

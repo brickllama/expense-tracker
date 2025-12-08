@@ -18,7 +18,7 @@ namespace Core
         double amount;
         std::string created_at;
         bool registered = false;
-#ifdef UNIT_TEST
+#ifdef TESTING
         bool operator==(const Expense& other) const
         {
             return id == other.id &&
